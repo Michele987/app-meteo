@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "search weather"
+    ;
+    background-image: url(./images/immagine1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#search{
+    font-family: 'Raleway', sans-serif;
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+}
+
+#weather{
+    grid-area: weather;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxWeather{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+}
+
+
+#weather1{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+#weather2{
+    display: flex;
+    width: 100%;
+    height: auto;
+    
+}
+
+#weather3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #92c0cc;
+}
+
+
+#umidita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B8DBD9;
+    width: 50%;
+
+
+}
+
+#pressione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B1E5F2;
+    width: 50%;
+}
+
+#tempMin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8DAD3;
+    width: 50%;
+}
+
+#tempMax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDF5FC;
+    width: 50%;
+}
+
+img{
+    max-width: 100%;
+    height: 40%;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+}
+
+i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+input{
+    width: 60%;
+    height: 7%;
+    outline: none;
+    border: 2px solid #576d66;
+    border-radius: 7px;
+    background: none;
+}
+
+label{
+    color: white;
+}
+
+input:focus{
+    border-color: #C2DFE3;
+}
+
+#labelStateCode{
+    margin-top: 10px;
+
+}
+
+button{
+    width: 40%;
+    height: 10%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 5%;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    background-color: #575A5E;
+}
+
+
+/* media query tablet */
+@media screen and (min-width:768px) and (max-width:906px){
+    section{
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "search weather";
+        background-position: 50% 50%;
+    }
+}
+
+/* media query phone */
+
+@media screen and (max-width:767px){
+    section{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "search" 
+        "weather";
+        background-position: 50% 50%;
+    }
+
+    form{
+        margin-top: 13%;
+    }
+
+    input{
+        height: 17%;
+    }
+
+    button{
+        height: 20%;
+    }
+
+}
+
